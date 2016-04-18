@@ -28,9 +28,9 @@ type ViewArgs struct {
 	Key            interface{}     `urlencode:"key"`
 	Keys           []interface{}   `urlencode:"keys"`
 	StartKey       interface{}     `urlencode:"startkey"`
-	StartKey_DocID string          `urlencode:"startkey_docid"`
+	StartKey_DocID UnescapedString `urlencode:"startkey_docid"`
 	EndKey         interface{}     `urlencode:"endkey"`
-	EndKey_DocID   string          `urlencode:"endkey_docid"`
+	EndKey_DocID   UnescapedString `urlencode:"endkey_docid"`
 	Limit          uint            `urlencode:"limit"`
 	Stale          UnescapedString `urlencode:"stale"` // Special string because we don't want to quote this one
 	Descending     bool            `urlencode:"descending"`
